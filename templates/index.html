@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>EcoExchange – Circular Economy System</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Empowering Sustainability Through Smart Waste Exchange</h1>
+        <p>Connect with recyclers, upcyclers, and industries to trade reusable materials and reduce environmental impact.</p>
+        <a href="{{ url_for('signup') }}"><button class="start-btn">Get Started</button></a>
+    </div>
+</section>
+
+<section class="material-section">
+    <h2>Recently Listed Materials</h2>
+    <div class="material-container">
+        <div class="material-card">
+            <img src="{{ url_for('static', filename='uploads/metal_scrap.jpg') }}" alt="Metal Scrap">
+            <p class="material-title">Metal Scrap</p>
+            <p class="material-meta">Category: Metal</p>
+        </div>
+        <div class="material-card">
+            <img src="{{ url_for('static', filename='uploads/plastic_bottles.jpg') }}" alt="Plastic Bottles">
+            <p class="material-title">Plastic Bottles</p>
+            <p class="material-meta">Category: Plastic</p>
+        </div>
+        <div class="material-card">
+            <img src="{{ url_for('static', filename='uploads/textile_waste.jpg') }}" alt="Textile Waste">
+            <p class="material-title">Textile Waste</p>
+            <p class="material-meta">Category: Fabric</p>
+        </div>
+        <div class="material-card">
+            <img src="{{ url_for('static', filename='uploads/electronic_parts.jpg') }}" alt="E-Waste">
+            <p class="material-title">E-Waste</p>
+            <p class="material-meta">Category: Electronics</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

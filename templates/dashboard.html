@@ -1,0 +1,217 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="h3 mb-0">My Dashboard</h1>
+        <p class="text-muted">Welcome back, {{ current_user.company_name }}! Here's what's happening with your circular economy activities.</p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card stat-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-primary">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="ms-auto">
+                        <h2 class="stat-value">{{ stats.active_listings }}</h2>
+                        <p class="stat-label">Active Listings</p>
+                    </div>
+                </div>
+                <div class="progress mt-3" style="height: 6px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: {{ (stats.active_listings / stats.max_listings) * 100 }}%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card stat-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-success">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="ms-auto">
+                        <h2 class="stat-value">{{ stats.completed_transactions }}</h2>
+                        <p class="stat-label">Completed Transactions</p>
+                    </div>
+                </div>
+                <div class="progress mt-3" style="height: 6px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ (stats.completed_transactions / stats.max_transactions) * 100 }}%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card stat-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-warning">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="ms-auto">
+                        <h2 class="stat-value">{{ stats.in_transit }}</h2>
+                        <p class="stat-label">Materials in Transit</p>
+                    </div>
+                </div>
+                <div class="progress mt-3" style="height: 6px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: {{ (stats.in_transit / stats.max_in_transit) * 100 }}%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card stat-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-info">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="ms-auto">
+                        <h2 class="stat-value">{{ stats.co2_saved|round(1) }}<small>tons</small></h2>
+                        <p class="stat-label">CO₂ Saved</p>
+                    </div>
+                </div>
+                <div class="progress mt-3" style="height: 6px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: {{ (stats.co2_saved / stats.max_co2) * 100 }}%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Recent Transactions</h5>
+                <a href="{{ url_for('transactions') }}" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Partner</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for transaction in recent_transactions %}
+                            <tr>
+                                <td>{{ transaction.material_name }}</td>
+                                <td>{{ transaction.partner_name }}</td>
+                                <td>{{ transaction.date.strftime('%b %d') }}</td>
+                                <td>
+                                    <span class="badge bg-{{ 'success' if transaction.status == 'completed' else 'warning' }}">
+                                        {{ transaction.status|capitalize }}
+                                    </span>
+                                </td>
+                                <td>${{ transaction.amount }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Environmental Impact</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <div class="impact-metric">
+                            <div class="metric-value">{{ impact.waste_diverted }}<small>kg</small></div>
+                            <div class="metric-label">Waste Diverted</div>
+                            <div class="metric-icon bg-primary">
+                                <i class="fas fa-trash-restore"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="impact-metric">
+                            <div class="metric-value">{{ impact.water_saved }}<small>L</small></div>
+                            <div class="metric-label">Water Saved</div>
+                            <div class="metric-icon bg-info">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="impact-metric">
+                            <div class="metric-value">{{ impact.energy_saved }}<small>kWh</small></div>
+                            <div class="metric-label">Energy Saved</div>
+                            <div class="metric-icon bg-warning">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="impact-metric">
+                            <div class="metric-value">{{ impact.trees_saved }}</div>
+                            <div class="metric-label">Trees Saved</div>
+                            <div class="metric-icon bg-success">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">AI Recommendations</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% for recommendation in recommendations %}
+                    <div class="col-md-4 mb-3">
+                        <div class="recommendation-card">
+                            <div class="recommendation-header">
+                                <h6>{{ recommendation.type|capitalize }} Opportunity</h6>
+                                <span class="badge bg-{{ 'success' if recommendation.type == 'buy' else 'primary' }}">
+                                    {{ recommendation.match_score|round(1) }} Match
+                                </span>
+                            </div>
+                            <div class="recommendation-body">
+                                <p class="mb-2"><strong>{{ recommendation.material_name }}</strong></p>
+                                <p class="text-muted small mb-2">{{ recommendation.quantity }} kg available</p>
+                                <p class="text-muted small mb-2">{{ recommendation.distance }} km away</p>
+                                <p class="text-muted small mb-2">${{ recommendation.price_per_kg }}/kg</p>
+                            </div>
+                            <div class="recommendation-footer">
+                                <a href="#" class="btn btn-sm btn-{{ 'success' if recommendation.type == 'buy' else 'primary' }}">
+                                    {{ 'Purchase' if recommendation.type == 'buy' else 'Sell To' }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

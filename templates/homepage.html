@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Economy Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #ff8f00;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .impact-counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .material-card {
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">CircularEconomy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#marketplace">Marketplace</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Our Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-success ms-2" href="/signin">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-success ms-2" href="/signup">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Transforming Waste into Resources</h1>
+            <p class="lead mb-4">Our AI-powered platform connects industries with recyclers to create a circular economy</p>
+            <a href="#marketplace" class="btn btn-primary btn-lg me-2">Browse Marketplace</a>
+            <a href="/register" class="btn btn-outline-light btn-lg">List Your Materials</a>
+        </div>
+    </section>
+
+    <section id="marketplace" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Available Materials</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-3">
+                        <h5 class="mb-3">Filter Materials</h5>
+                        <div class="mb-3">
+                            <label class="form-label">Material Type</label>
+                            <select class="form-select">
+                                <option>All Materials</option>
+                                <option>Plastic</option>
+                                <option>Metal</option>
+                                <option>Paper</option>
+                                <option>Textile</option>
+                                <option>Electronic</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Location</label>
+                            <select class="form-select">
+                                <option>Any Location</option>
+                                <option>Within 50km</option>
+                                <option>Within 100km</option>
+                                <option>Within 200km</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card material-card h-100">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb" class="card-img-top" alt="Plastic Waste">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title mb-0">HDPE Plastic Scraps</h5>
+                                        <span class="badge bg-success">Verified</span>
+                                    </div>
+                                    <p class="text-muted small mb-2">Available: 2.5 tons</p>
+                                    <p class="card-text">High-density polyethylene scraps from packaging industry. Clean and ready for recycling.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold text-success">$0.25/kg</span>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <small class="text-muted">Posted 2 days ago by Packaging Co.</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">How Our Platform Works</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="mb-3">
+                            <span class="display-4">1</span>
+                        </div>
+                        <h4>List or Find Materials</h4>
+                        <p>Businesses list their waste materials or search for materials they need.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="mb-3">
+                            <span class="display-4">2</span>
+                        </div>
+                        <h4>AI Matchmaking</h4>
+                        <p>Our AI suggests optimal matches based on material type, location, and quantity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="mb-3">
+                            <span class="display-4">3</span>
+                        </div>
+                        <h4>Track & Complete</h4>
+                        <p>Use our IoT tracking to monitor shipments and complete the transaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Environmental Impact</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="impact-counter">1,245</div>
+                    <p class="lead">Tons of Waste Diverted</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="impact-counter">3,890</div>
+                    <p class="lead">CO₂ Tons Reduced</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="impact-counter">576</div>
+                    <p class="lead">Businesses Connected</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="impact-counter">$2.1M</div>
+                    <p class="lead">Economic Value Created</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="mb-4">About CircularEconomy</h2>
+                    <p class="lead">We're revolutionizing waste management through technology and innovation.</p>
+                    <p>Our platform leverages artificial intelligence and IoT to create a circular economy where waste becomes a valuable resource. By connecting producers with recyclers and upcyclers, we're building a sustainable future for industrial operations.</p>
+                    <a href="#" class="btn btn-primary mt-3">Learn More About Our Technology</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf" class="img-fluid rounded" alt="Circular Economy Concept">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>CircularEconomy</h5>
+                    <p>Building sustainable industrial ecosystems through technology.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Marketplace</a></li>
+                        <li><a href="#" class="text-white">How It Works</a></li>
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>info@circulareconomy.com</li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 CircularEconomy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            setTimeout(() => {
+                console.log("Loading materials from API...");
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <a href="{{ url_for('home') }}" class="sidebar-brand">
+            <i class="fas fa-recycle me-2"></i>
+            <span>ExoExchange</span>
+        </a>
+        <button class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="sidebar-menu">
+        <!-- Main Section -->
+        <div class="menu-section">
+            <h6 class="menu-section-title"> NAVIGATION</h6>
+            <ul class="menu-list">
+                <li class="menu-item {% if request.endpoint == 'home' %}active{% endif %}">
+                    <a href="{{ url_for('home') }}" class="menu-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item {% if request.endpoint == 'marketplace' %}active{% endif %}">
+                    <a href="{{ url_for('marketplace') }}" class="menu-link">
+                        <i class="fas fa-store"></i>
+                        <span>Marketplace</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Materials Section -->
+        <div class="menu-section">
+            <h6 class="menu-section-title"> MATERIALS</h6>
+            <ul class="menu-list">
+                <li class="menu-item {% if request.endpoint == 'materials' %}active{% endif %}">
+                    <a href="{{ url_for('materials') }}" class="menu-link">
+                        <i class="fas fa-box-open"></i>
+                        <span>My Materials</span>
+                    </a>
+                </li>
+                <li class="menu-item {% if request.endpoint == 'transactions' %}active{% endif %}">
+                    <a href="{{ url_for('transactions') }}" class="menu-link">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="menu-item {% if request.endpoint == 'tracking' %}active{% endif %}">
+                    <a href="{{ url_for('tracking') }}" class="menu-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Material Tracking</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Reports Section -->
+        <div class="menu-section">
+            <h6 class="menu-section-title"> REPORTS</h6>
+            <ul class="menu-list">
+                <li class="menu-item {% if request.endpoint == 'impact' %}active{% endif %}">
+                    <a href="{{ url_for('impact') }}" class="menu-link">
+                        <i class="fas fa-leaf"></i>
+                        <span>Environmental Impact</span>
+                    </a>
+                </li>
+                <li class="menu-item {% if request.endpoint == 'reports' %}active{% endif %}">
+                    <a href="{{ url_for('reports') }}" class="menu-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
