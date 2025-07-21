@@ -120,11 +120,11 @@ def home():
         'max_in_transit': 10,
         'max_co2': 100
     }
-    
+
     recent_transactions = Transaction.query.filter(
         (Transaction.buyer_id == current_user.id) | (Transaction.seller_id == current_user.id)
     ).order_by(Transaction.transaction_date.desc()).limit(5).all()
-    
+
     formatted_transactions = []
     for t in recent_transactions:
         material = Material.query.get(t.material_id)
@@ -136,7 +136,7 @@ def home():
             'status': t.status,
             'amount': t.total_price or 0
         })
-    
+
     impact = {
         'waste_diverted': db.session.query(db.func.sum(ImpactMetric.landfill_waste_reduced_kg))
                          .join(Transaction, ImpactMetric.transaction_id == Transaction.id)
@@ -155,7 +155,7 @@ def home():
                          .filter((Transaction.buyer_id == current_user.id) | (Transaction.seller_id == current_user.id))
                          .scalar() or 0) / 10000)  # Approx 10kg of paper per tree
     }
-    
+
     recommendations = [
         {
             'type': 'buy',
@@ -182,12 +182,45 @@ def home():
             'match_score': 0.65
         }
     ]
-    
+
+    # --- Chart Data for Dashboard ---
+    # Transactions over time (last 6 months)
+    from sqlalchemy import extract
+    from collections import OrderedDict
+    import calendar
+    import datetime as dt
+    now = dt.datetime.now()
+    months = [(now - dt.timedelta(days=30*i)).strftime('%Y-%m') for i in reversed(range(6))]
+    month_labels = [calendar.month_abbr[int(m.split('-')[1])] + ' ' + m.split('-')[0][2:] for m in months]
+    transaction_counts = []
+    for m in months:
+        year, month = int(m.split('-')[0]), int(m.split('-')[1])
+        count = Transaction.query.filter(
+            ((Transaction.buyer_id == current_user.id) | (Transaction.seller_id == current_user.id)),
+            extract('year', Transaction.transaction_date) == year,
+            extract('month', Transaction.transaction_date) == month
+        ).count()
+        transaction_counts.append(count)
+    chart_transactions = {'labels': month_labels, 'data': transaction_counts}
+
+    # Material categories pie chart
+    category_counts = db.session.query(Material.category, db.func.count(Material.id)).filter_by(seller=current_user.company_name).group_by(Material.category).all()
+    chart_categories = {
+        'labels': [c[0] or 'Uncategorized' for c in category_counts],
+        'data': [c[1] for c in category_counts]
+    }
+
+    # Goal progress (example: % of 50 completed transactions)
+    goal_progress = min(100, int((stats['completed_transactions'] / 50) * 100))
+
     return render_template('dashboard.html',
                          stats=stats,
                          recent_transactions=formatted_transactions,
                          impact=impact,
                          recommendations=recommendations,
+                         chart_transactions=chart_transactions,
+                         chart_categories=chart_categories,
+                         goal_progress=goal_progress,
                          current_year=datetime.now().year)
 
 @app.route('/marketplace')

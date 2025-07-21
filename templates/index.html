@@ -10,8 +10,33 @@
 <section class="hero">
     <div class="hero-content">
         <h1>Empowering Sustainability Through Smart Waste Exchange</h1>
+        <h3 class="hero-subheading">Join the circular economy revolution and turn waste into opportunity.</h3>
         <p>Connect with recyclers, upcyclers, and industries to trade reusable materials and reduce environmental impact.</p>
-        <a href="{{ url_for('signup') }}"><button class="start-btn">Get Started</button></a>
+        <div class="hero-cta">
+            <a href="{{ url_for('signup') }}"><button class="start-btn">Get Started</button></a>
+            <a href="{{ url_for('marketplace') }}"><button class="market-btn">View Marketplace</button></a>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <h2>Why EcoExchange?</h2>
+    <div class="features-container">
+        <div class="feature-card">
+            <span class="feature-icon">♻️</span>
+            <h4>Promote Sustainability</h4>
+            <p>Reduce landfill waste and carbon footprint by reusing valuable materials.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🤝</span>
+            <h4>Connect & Collaborate</h4>
+            <p>Build partnerships with trusted recyclers, upcyclers, and industries.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">💡</span>
+            <h4>Innovative Solutions</h4>
+            <p>Discover creative ways to upcycle and repurpose materials for new uses.</p>
+        </div>
     </div>
 </section>
 
@@ -37,6 +62,27 @@
             <img src="{{ url_for('static', filename='uploads/electronic_parts.jpg') }}" alt="E-Waste">
             <p class="material-title">E-Waste</p>
             <p class="material-meta">Category: Electronics</p>
+        </div>
+    </div>
+    <div class="marketplace-link">
+        <a href="{{ url_for('marketplace') }}"><button class="market-btn">Explore Full Marketplace</button></a>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonials-container">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"EcoExchange helped us find reliable partners and reduce our waste disposal costs!"</p>
+            <span class="testimonial-user">– GreenTech Industries</span>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"A fantastic platform for sourcing quality recycled materials. Highly recommended!"</p>
+            <span class="testimonial-user">– RecyclePro Solutions</span>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"The impact dashboard is a game changer for tracking our sustainability goals."</p>
+            <span class="testimonial-user">– UrbanUpcyclers</span>
         </div>
     </div>
 </section>

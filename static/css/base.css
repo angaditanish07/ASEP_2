@@ -52,43 +52,157 @@ a {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    padding: 120px 20px 80px 20px;
+    background: linear-gradient(120deg, #007f55 60%, #90ee90 100%);
     position: relative;
-    color: white;
+    color: #fff;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
     max-width: 700px;
     margin: auto;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px 30px 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
 }
-
+.hero-subheading {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    color: #90ee90;
+}
 .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 28px;
+    color: #e0ffe0;
 }
 
-.start-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 14px 30px;
-    font-size: 18px;
+.hero-cta {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.start-btn, .market-btn {
+    background: linear-gradient(90deg, #28a745 60%, #007f55 100%);
+    color: #fff;
+    padding: 15px 36px;
+    font-size: 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.3s, transform 0.2s;
+}
+.start-btn:hover, .market-btn:hover {
+    background: linear-gradient(90deg, #1c7c35 60%, #145a32 100%);
+    transform: translateY(-2px) scale(1.04);
 }
 
-.start-btn:hover {
-    background-color: #1c7c35;
+.marketplace-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Features Section */
+.features-section {
+    background: #f8fff8;
+    padding: 60px 20px 40px 20px;
+}
+.features-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 36px;
+    color: #007f55;
+    font-weight: 700;
+}
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+.feature-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    padding: 32px 28px 28px 28px;
+    width: 270px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.feature-card:hover {
+    box-shadow: 0 8px 32px rgba(0,127,85,0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+.feature-icon {
+    font-size: 38px;
+    margin-bottom: 16px;
+    display: block;
+}
+.feature-card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007f55;
+    font-weight: 600;
+}
+.feature-card p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: #eaffea;
+    padding: 60px 20px 50px 20px;
+}
+.testimonials-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 36px;
+    color: #007f55;
+    font-weight: 700;
+}
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+.testimonial-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    padding: 28px 24px 22px 24px;
+    width: 320px;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+}
+.testimonial-text {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 18px;
+}
+.testimonial-user {
+    font-size: 15px;
+    color: #007f55;
+    font-style: normal;
+    font-weight: 600;
 }
 
 /* Material Cards */
@@ -199,4 +313,39 @@ a {
     padding: 16px;
     margin-top: 40px;
     font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features-container, .material-container, .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-content {
+        padding: 24px 8px;
+    }
+}
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero-subheading {
+        font-size: 16px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
+    .start-btn, .market-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+    .feature-card, .testimonial-card {
+        width: 95vw;
+        min-width: 0;
+        padding: 18px 8px;
+    }
+    .material-card {
+        width: 95vw;
+        min-width: 0;
+    }
 }

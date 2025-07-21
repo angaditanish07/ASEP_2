@@ -1,6 +1,65 @@
 {% extends "dashboard_base.html" %}
 
 {% block content %}
+<!-- Widgets Row -->
+<div class="row mb-4">
+    <div class="col-md-4 mb-3">
+        <div class="card stat-card text-center">
+            <div class="card-body">
+                <div class="mb-2"><i class="fas fa-plus-circle fa-2x text-success"></i></div>
+                <h5 class="mb-1">Add New Material</h5>
+                <a href="{{ url_for('add_material') }}" class="btn btn-success btn-sm">Add Material</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card stat-card text-center">
+            <div class="card-body">
+                <div class="mb-2"><i class="fas fa-file-alt fa-2x text-info"></i></div>
+                <h5 class="mb-1">Generate Report</h5>
+                <a href="{{ url_for('reports') }}" class="btn btn-info btn-sm">Reports</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card stat-card text-center">
+            <div class="card-body">
+                <div class="mb-2"><i class="fas fa-bullseye fa-2x text-warning"></i></div>
+                <h5 class="mb-1">Goal Progress</h5>
+                <div class="progress mb-2" style="height: 10px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ goal_progress }}%"></div>
+                </div>
+                <span>{{ goal_progress }}% of 50 transactions</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row mb-4">
+    <div class="col-lg-7 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Transactions Over Time</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="transactionsLineChart" height="120"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Material Categories</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="categoriesPieChart" height="120"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Existing Stats and Dashboard Content -->
 <div class="row mb-4">
     <div class="col-12">
         <h1 class="h3 mb-0">My Dashboard</h1>
@@ -214,4 +273,60 @@
 {% endblock %}
 
 {% block scripts %}
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Transactions Over Time Line Chart
+const ctxLine = document.getElementById('transactionsLineChart').getContext('2d');
+const transactionsLineChart = new Chart(ctxLine, {
+    type: 'line',
+    data: {
+        labels: {{ chart_transactions.labels|tojson }},
+        datasets: [{
+            label: 'Transactions',
+            data: {{ chart_transactions.data|tojson }},
+            borderColor: '#10b981',
+            backgroundColor: 'rgba(16,185,129,0.12)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 5,
+            pointBackgroundColor: '#10b981',
+            pointBorderColor: '#fff',
+            pointHoverRadius: 7
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+        },
+        scales: {
+            y: { beginAtZero: true, ticks: { stepSize: 1 } }
+        }
+    }
+});
+
+// Material Categories Pie Chart
+const ctxPie = document.getElementById('categoriesPieChart').getContext('2d');
+const categoriesPieChart = new Chart(ctxPie, {
+    type: 'pie',
+    data: {
+        labels: {{ chart_categories.labels|tojson }},
+        datasets: [{
+            data: {{ chart_categories.data|tojson }},
+            backgroundColor: [
+                '#0d9488', '#10b981', '#f59e0b', '#0ea5e9', '#f43f5e', '#6366f1', '#fbbf24', '#a3e635', '#f472b6', '#818cf8'
+            ],
+            borderWidth: 2,
+            borderColor: '#fff',
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: 'bottom' },
+        }
+    }
+});
+</script>
 {% endblock %}
