@@ -1,0 +1,43 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}My Materials{% endblock %}
+
+{% block content %}
+<h1>My Materials</h1>
+
+<a href="{{ url_for('add_material') }}" class="btn btn-primary mb-3">Add New Material</a>
+
+{% if materials %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Location</th>
+            <th>Price per Unit</th>
+            <th>Available</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for material in materials %}
+        <tr>
+            <td>{{ material.name }}</td>
+            <td>{{ material.category }}</td>
+            <td>{{ material.quantity }}</td>
+            <td>{{ material.location }}</td>
+            <td>₹{{ "%.2f"|format(material.price_per_unit) }}</td>
+            <td>{{ 'Yes' if material.available else 'No' }}</td>
+            <td>
+                <!-- Actions like edit or delete can be added here -->
+                <a href="{{ url_for('material_detail', material_id=material.id) }}" class="btn btn-info btn-sm">View</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>You have not listed any materials yet.</p>
+{% endif %}
+{% endblock %}

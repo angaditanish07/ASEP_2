@@ -1,0 +1,227 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="h3 mb-0">Generated Report</h1>
+                <p class="text-muted">{{ report_type|title }} Report for {{ time_period|upper }}</p>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-outline-primary">
+                    <i class="fas fa-download me-2"></i> Download
+                </button>
+                <button class="btn btn-outline-secondary">
+                    <i class="fas fa-print me-2"></i> Print
+                </button>
+                <button class="btn btn-outline-success">
+                    <i class="fas fa-share-alt me-2"></i> Share
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row mb-4">
+            <div class="col-md-4 text-center">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" height="60">
+            </div>
+            <div class="col-md-4 text-center">
+                <h2 class="mb-0">Environmental Impact Report</h2>
+                <p class="text-muted">{{ current_time.strftime('%B %d, %Y') }}</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p class="mb-1"><strong>Generated for:</strong></p>
+                <p class="mb-0">{{ current_user.company_name }}</p>
+                <p class="text-muted small">{{ current_user.email }}</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h4 class="mb-3">Executive Summary</h4>
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <p>This report summarizes the environmental impact of your circular economy activities through the EcoExchange platform during the selected period. Your participation has contributed to significant reductions in waste, carbon emissions, and resource consumption.</p>
+                        
+                        {% if report_type in ['co2', 'full'] %}
+                        <p><i class="fas fa-leaf text-success me-2"></i> <strong>{{ data.co2_saved_tons|round(1) }} metric tons</strong> of CO₂ emissions avoided</p>
+                        {% endif %}
+                        
+                        {% if report_type in ['waste', 'full'] %}
+                        <p><i class="fas fa-recycle text-info me-2"></i> <strong>{{ data.waste_diverted_kg|round(1) }} kg</strong> of waste diverted from landfills</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if report_type in ['co2', 'full'] %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <h4 class="mb-3">Carbon Emissions Savings</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="co2Chart" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5">{{ data.co2_saved_tons|round(1) }}</h2>
+                                <p class="text-muted mb-0">Metric tons CO₂ saved</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5">{{ (data.co2_saved_tons * 1100)|round|int }}</h2>
+                                <p class="text-muted mb-0">Miles not driven</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5">{{ (data.co2_saved_tons * 1.6)|round|int }}</h2>
+                                <p class="text-muted mb-0">Homes' electricity for 1 day</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if report_type in ['waste', 'full'] %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <h4 class="mb-3">Waste Diversion</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="wasteChart" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5">{{ data.waste_diverted_kg|round(1) }}</h2>
+                                <p class="text-muted mb-0">kg waste diverted</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5">{{ (data.waste_diverted_kg / 10000)|round(1) }}</h2>
+                                <p class="text-muted mb-0">Trees saved</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5">{{ (data.waste_diverted_kg / 2)|round|int }}</h2>
+                                <p class="text-muted mb-0">Landfill space (cubic feet)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h4 class="mb-3">Methodology</h4>
+                        <p>Impact calculations are based on industry-standard conversion factors:</p>
+                        <ul>
+                            <li>CO₂ savings calculated using material-specific emission factors from EPA databases</li>
+                            <li>Waste diversion impacts based on landfill gas generation models</li>
+                            <li>Water and energy savings calculated using sector-specific benchmarks</li>
+                        </ul>
+                        <p class="mb-0"><small class="text-muted">Report generated on {{ current_time.strftime('%B %d, %Y at %H:%M') }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // CO2 Chart
+    const co2Ctx = document.getElementById('co2Chart').getContext('2d');
+    const co2Chart = new Chart(co2Ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'CO₂ Savings (metric tons)',
+                data: [12.5, 15.2, 18.7, 14.3, 20.1, 22.4],
+                borderColor: 'rgba(16, 185, 129, 1)',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                borderWidth: 2,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Monthly Carbon Savings'
+                }
+            }
+        }
+    });
+
+    // Waste Chart
+    const wasteCtx = document.getElementById('wasteChart').getContext('2d');
+    const wasteChart = new Chart(wasteCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Plastic', 'Metal', 'Paper', 'Glass', 'Other'],
+            datasets: [{
+                label: 'Waste Diverted (kg)',
+                data: [1200, 850, 620, 430, 290],
+                backgroundColor: [
+                    'rgba(14, 165, 233, 0.7)',
+                    'rgba(99, 102, 241, 0.7)',
+                    'rgba(139, 92, 246, 0.7)',
+                    'rgba(236, 72, 153, 0.7)',
+                    'rgba(245, 158, 11, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(14, 165, 233, 1)',
+                    'rgba(99, 102, 241, 1)',
+                    'rgba(139, 92, 246, 1)',
+                    'rgba(236, 72, 153, 1)',
+                    'rgba(245, 158, 11, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Waste by Material Type'
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="container-fluid px-4">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="{{ url_for('marketplace') }}">Marketplace</a></li>
+<li class="breadcrumb-item"><a href="{{ url_for('marketplace') }}?category={{ material.category }}">{{ material.category }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ material.name }}</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <!-- Material Images -->
+        {# Image removed as per user request #}
+        {# <div class="col-lg-5">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <img src="{{ url_for('static', filename='images/materials/' + material.category|lower + '-large.jpg') }}" 
+                         class="img-fluid rounded" alt="{{ material.name }}">
+                </div>
+            </div>
+        </div> #}
+
+        <!-- Material Details -->
+        <div class="col-lg-7">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h2 class="card-title mb-1">{{ material.name }}</h2>
+                            <span class="badge bg-info text-dark">{{ material.category }}</span>
+                        </div>
+<div class="text-end">
+    <div class="h4 mb-0">₹{{ material.price_per_unit }} <small class="text-muted">per unit</small></div>
+    <span class="badge {% if material.available %}bg-success{% else %}bg-secondary{% endif %}">
+        {% if material.available %}Available{% else %}Unavailable{% endif %}
+    </span>
+</div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5>Material Details</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>Quantity:</strong> {{ material.quantity }}</li>
+                                <li><strong>Location:</strong> {{ material.location }}</li>
+                                <li><strong>Seller:</strong> {{ material.seller }}</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Shipping Information</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-truck me-2"></i> Pickup available</li>
+                                <li><i class="fas fa-shipping-fast me-2"></i> Delivery negotiable</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {% if material.available %}
+                    <div class="border-top pt-3">
+                        <h5 class="mb-3">Request Material</h5>
+<form method="POST" action="{{ url_for('request_material', material_id=material.id) }}">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="quantity" class="form-label">Quantity Needed</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
+                                        <span class="input-group-text">{{ material.quantity.split(' ')[1] }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="deliveryDate" class="form-label">Required By</label>
+                                    <input type="date" class="form-control" id="deliveryDate" name="delivery_date">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message to Seller</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Request
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Similar Materials -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Similar Materials</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    {% for i in range(1) %}
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="card h-100 border-primary">
+                            <div class="material-img-container">
+                                <img src="{{ url_for('static', filename='images/materials/' + material.category|lower + '.jpg') }}" 
+                                     class="card-img-top" alt="{{ material.name }}">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">{{ material.name }} <span class="badge bg-primary">Current</span></h6>
+                                <div class="mb-2">
+                                    <span class="badge bg-info text-dark">{{ material.category }}</span>
+                                </div>
+                                <div class="mb-2">
+                                    <i class="fas fa-map-marker-alt text-muted me-1"></i>
+                                    <small>{{ material.location }}</small>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">₹{{ material.price_per_unit }}/unit</h6>
+                                    <a href="{{ url_for('material_detail', material_id=material.id) }}" 
+                                       class="btn btn-sm btn-outline-primary">
+                                        View
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                        {% for similar in similar_materials %}
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card h-100">
+                                <div class="material-img-container">
+                                    <img src="{{ url_for('static', filename='images/materials/' + similar.category|lower + '.jpg') }}" 
+                                         class="card-img-top" alt="{{ similar.name }}">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">{{ similar.name }}</h6>
+                                    <div class="mb-2">
+                                        <span class="badge bg-info text-dark">{{ similar.category }}</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="fas fa-map-marker-alt text-muted me-1"></i>
+                                        <small>{{ similar.location }}</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">₹{{ similar.price_per_unit }}/unit</h6>
+<a href="{{ url_for('material_detail', material_id=similar.id) }}"
+                                           class="btn btn-sm btn-outline-primary">
+                                            View
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

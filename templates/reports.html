@@ -1,0 +1,181 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="h3 mb-0">Environmental Reports</h1>
+        <p class="text-muted">Generate detailed reports on your circular economy impact.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Generate New Report</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('generate_report') }}">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Report Type</label>
+                            <div class="list-group">
+                                {% for report in report_types %}
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-2" type="radio" name="report_type" value="{{ report.id }}" {% if loop.first %}checked{% endif %}>
+                                    <i class="fas fa-{{ report.icon }} me-2"></i> {{ report.name }}
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Time Period</label>
+                            <div class="list-group">
+                                {% for period in time_periods %}
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-2" type="radio" name="time_period" value="{{ period.id }}" {% if loop.first %}checked{% endif %}>
+                                    {{ period.name }}
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-file-download me-2"></i> Generate Report
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Report Templates</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">Monthly Sustainability Report</h6>
+                            <small class="text-muted">Comprehensive monthly impact</small>
+                        </div>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">Annual ESG Report</h6>
+                            <small class="text-muted">For corporate sustainability</small>
+                        </div>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">Supplier Impact Report</h6>
+                            <small class="text-muted">Partner contributions</small>
+                        </div>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Recent Reports</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-1">June 2023 Impact</h6>
+                            <small>3 days ago</small>
+                        </div>
+                        <small class="text-muted">PDF, 1.2 MB</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-1">Q2 Sustainability</h6>
+                            <small>1 month ago</small>
+                        </div>
+                        <small class="text-muted">PDF, 2.4 MB</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Saved Reports</h5>
+                <button class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-plus me-1"></i> New Template
+                </button>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Report Name</th>
+                                <th>Type</th>
+                                <th>Last Generated</th>
+                                <th>Format</th>
+                                <th>Size</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monthly Impact - May 2023</td>
+                                <td>Comprehensive</td>
+                                <td>Jun 5, 2023</td>
+                                <td>PDF</td>
+                                <td>1.8 MB</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Supplier Impact Q1</td>
+                                <td>Partner</td>
+                                <td>Apr 15, 2023</td>
+                                <td>Excel</td>
+                                <td>3.2 MB</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

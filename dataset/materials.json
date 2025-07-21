@@ -1,0 +1,1002 @@
+[
+    {
+        "id": 1,
+        "name": "Material 1",
+        "category": "Textile",
+        "quantity": "1996 kg",
+        "location": "Mumbai, India",
+        "price_per_unit": 10,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 2,
+        "name": "Material 2",
+        "category": "Metal",
+        "quantity": "1770 kg",
+        "location": "Jaipur, India",
+        "price_per_unit": 21,
+        "available": true,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 3,
+        "name": "Material 3",
+        "category": "Construction",
+        "quantity": "1231 units",
+        "location": "Delhi, India",
+        "price_per_unit": 42,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 4,
+        "name": "Material 4",
+        "category": "Electronic",
+        "quantity": "874 kg",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 5,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 5,
+        "name": "Material 5",
+        "category": "Wood",
+        "quantity": "526 units",
+        "location": "Hyderabad, India",
+        "price_per_unit": 29,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 6,
+        "name": "Material 6",
+        "category": "Metal",
+        "quantity": "1547 kg",
+        "location": "Pune, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 7,
+        "name": "Material 7",
+        "category": "Wood",
+        "quantity": "799 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 9,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 8,
+        "name": "Material 8",
+        "category": "Glass",
+        "quantity": "1865 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 50,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 9,
+        "name": "Material 9",
+        "category": "Plastic",
+        "quantity": "1611 kg",
+        "location": "Mumbai, India",
+        "price_per_unit": 6,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 10,
+        "name": "Material 10",
+        "category": "Plastic",
+        "quantity": "532 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 33,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 11,
+        "name": "Material 11",
+        "category": "Electronic",
+        "quantity": "1103 m\u00b2",
+        "location": "Nashik, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 12,
+        "name": "Material 12",
+        "category": "Plastic",
+        "quantity": "1599 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 43,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 13,
+        "name": "Material 13",
+        "category": "Wood",
+        "quantity": "690 kg",
+        "location": "Jaipur, India",
+        "price_per_unit": 24,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 14,
+        "name": "Material 14",
+        "category": "Wood",
+        "quantity": "1351 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 29,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 15,
+        "name": "Material 15",
+        "category": "Electronic",
+        "quantity": "127 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 10,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 16,
+        "name": "Material 16",
+        "category": "Electronic",
+        "quantity": "397 m\u00b2",
+        "location": "Kolkata, India",
+        "price_per_unit": 18,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 17,
+        "name": "Material 17",
+        "category": "Glass",
+        "quantity": "1825 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 12,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 18,
+        "name": "Material 18",
+        "category": "Glass",
+        "quantity": "165 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 42,
+        "available": true,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 19,
+        "name": "Material 19",
+        "category": "Wood",
+        "quantity": "1997 kg",
+        "location": "Hyderabad, India",
+        "price_per_unit": 33,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 20,
+        "name": "Material 20",
+        "category": "Wood",
+        "quantity": "1756 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 21,
+        "name": "Material 21",
+        "category": "Plastic",
+        "quantity": "810 m\u00b2",
+        "location": "Bangalore, India",
+        "price_per_unit": 25,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 22,
+        "name": "Material 22",
+        "category": "Glass",
+        "quantity": "1830 m\u00b2",
+        "location": "Jaipur, India",
+        "price_per_unit": 22,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 23,
+        "name": "Material 23",
+        "category": "Glass",
+        "quantity": "1752 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 24,
+        "name": "Material 24",
+        "category": "Electronic",
+        "quantity": "528 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 33,
+        "available": true,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 25,
+        "name": "Material 25",
+        "category": "Textile",
+        "quantity": "989 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 33,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 26,
+        "name": "Material 26",
+        "category": "Glass",
+        "quantity": "381 kg",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 41,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 27,
+        "name": "Material 27",
+        "category": "Wood",
+        "quantity": "1434 units",
+        "location": "Hyderabad, India",
+        "price_per_unit": 26,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 28,
+        "name": "Material 28",
+        "category": "Glass",
+        "quantity": "908 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 29,
+        "name": "Material 29",
+        "category": "Plastic",
+        "quantity": "1781 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 50,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 30,
+        "name": "Material 30",
+        "category": "Plastic",
+        "quantity": "103 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 38,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 31,
+        "name": "Material 31",
+        "category": "Metal",
+        "quantity": "1155 units",
+        "location": "Delhi, India",
+        "price_per_unit": 38,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 32,
+        "name": "Material 32",
+        "category": "Glass",
+        "quantity": "258 m\u00b2",
+        "location": "Pune, India",
+        "price_per_unit": 21,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 33,
+        "name": "Material 33",
+        "category": "Glass",
+        "quantity": "724 m\u00b2",
+        "location": "Nashik, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 34,
+        "name": "Material 34",
+        "category": "Electronic",
+        "quantity": "1439 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 35,
+        "name": "Material 35",
+        "category": "Glass",
+        "quantity": "1694 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 45,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 36,
+        "name": "Material 36",
+        "category": "Textile",
+        "quantity": "462 m\u00b2",
+        "location": "Bangalore, India",
+        "price_per_unit": 16,
+        "available": true,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 37,
+        "name": "Material 37",
+        "category": "Textile",
+        "quantity": "1465 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 19,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 38,
+        "name": "Material 38",
+        "category": "Textile",
+        "quantity": "831 units",
+        "location": "Mumbai, India",
+        "price_per_unit": 5,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 39,
+        "name": "Material 39",
+        "category": "Plastic",
+        "quantity": "525 m\u00b2",
+        "location": "Mumbai, India",
+        "price_per_unit": 46,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 40,
+        "name": "Material 40",
+        "category": "Textile",
+        "quantity": "1367 m\u00b2",
+        "location": "Chennai, India",
+        "price_per_unit": 25,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 41,
+        "name": "Material 41",
+        "category": "Metal",
+        "quantity": "814 units",
+        "location": "Hyderabad, India",
+        "price_per_unit": 39,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 42,
+        "name": "Material 42",
+        "category": "Plastic",
+        "quantity": "1710 units",
+        "location": "Chennai, India",
+        "price_per_unit": 40,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 43,
+        "name": "Material 43",
+        "category": "Metal",
+        "quantity": "1424 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 47,
+        "available": false,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 44,
+        "name": "Material 44",
+        "category": "Electronic",
+        "quantity": "1163 m\u00b2",
+        "location": "Delhi, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 45,
+        "name": "Material 45",
+        "category": "Electronic",
+        "quantity": "1296 units",
+        "location": "Delhi, India",
+        "price_per_unit": 27,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 46,
+        "name": "Material 46",
+        "category": "Metal",
+        "quantity": "454 units",
+        "location": "Chennai, India",
+        "price_per_unit": 12,
+        "available": true,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 47,
+        "name": "Material 47",
+        "category": "Wood",
+        "quantity": "141 kg",
+        "location": "Hyderabad, India",
+        "price_per_unit": 34,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 48,
+        "name": "Material 48",
+        "category": "Construction",
+        "quantity": "211 units",
+        "location": "Mumbai, India",
+        "price_per_unit": 16,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 49,
+        "name": "Material 49",
+        "category": "Textile",
+        "quantity": "670 kg",
+        "location": "Chennai, India",
+        "price_per_unit": 19,
+        "available": false,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 50,
+        "name": "Material 50",
+        "category": "Metal",
+        "quantity": "789 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 21,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 51,
+        "name": "Material 51",
+        "category": "Plastic",
+        "quantity": "1052 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 52,
+        "name": "Material 52",
+        "category": "Wood",
+        "quantity": "289 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 53,
+        "name": "Material 53",
+        "category": "Construction",
+        "quantity": "628 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 27,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 54,
+        "name": "Material 54",
+        "category": "Textile",
+        "quantity": "201 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 55,
+        "name": "Material 55",
+        "category": "Electronic",
+        "quantity": "1691 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 26,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 56,
+        "name": "Material 56",
+        "category": "Metal",
+        "quantity": "1027 m\u00b2",
+        "location": "Jaipur, India",
+        "price_per_unit": 37,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 57,
+        "name": "Material 57",
+        "category": "Glass",
+        "quantity": "1306 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 14,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 58,
+        "name": "Material 58",
+        "category": "Plastic",
+        "quantity": "1004 m\u00b2",
+        "location": "Bangalore, India",
+        "price_per_unit": 22,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 59,
+        "name": "Material 59",
+        "category": "Plastic",
+        "quantity": "348 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 15,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 60,
+        "name": "Material 60",
+        "category": "Textile",
+        "quantity": "1353 units",
+        "location": "Jaipur, India",
+        "price_per_unit": 11,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 61,
+        "name": "Material 61",
+        "category": "Metal",
+        "quantity": "789 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 13,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 62,
+        "name": "Material 62",
+        "category": "Metal",
+        "quantity": "1589 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 63,
+        "name": "Material 63",
+        "category": "Textile",
+        "quantity": "1510 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 22,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 64,
+        "name": "Material 64",
+        "category": "Construction",
+        "quantity": "1901 m\u00b2",
+        "location": "Chennai, India",
+        "price_per_unit": 14,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 65,
+        "name": "Material 65",
+        "category": "Wood",
+        "quantity": "336 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 29,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 66,
+        "name": "Material 66",
+        "category": "Glass",
+        "quantity": "1033 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 18,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 67,
+        "name": "Material 67",
+        "category": "Textile",
+        "quantity": "342 kg",
+        "location": "Chennai, India",
+        "price_per_unit": 45,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 68,
+        "name": "Material 68",
+        "category": "Metal",
+        "quantity": "1847 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 18,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 69,
+        "name": "Material 69",
+        "category": "Wood",
+        "quantity": "1695 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 18,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 70,
+        "name": "Material 70",
+        "category": "Glass",
+        "quantity": "1682 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 28,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 71,
+        "name": "Material 71",
+        "category": "Plastic",
+        "quantity": "1071 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 72,
+        "name": "Material 72",
+        "category": "Textile",
+        "quantity": "984 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 45,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 73,
+        "name": "Material 73",
+        "category": "Wood",
+        "quantity": "290 units",
+        "location": "Pune, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 74,
+        "name": "Material 74",
+        "category": "Glass",
+        "quantity": "1502 units",
+        "location": "Chennai, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 75,
+        "name": "Material 75",
+        "category": "Textile",
+        "quantity": "1684 m\u00b2",
+        "location": "Nashik, India",
+        "price_per_unit": 8,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 76,
+        "name": "Material 76",
+        "category": "Electronic",
+        "quantity": "1911 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 13,
+        "available": false,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 77,
+        "name": "Material 77",
+        "category": "Electronic",
+        "quantity": "114 m\u00b2",
+        "location": "Delhi, India",
+        "price_per_unit": 49,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 78,
+        "name": "Material 78",
+        "category": "Metal",
+        "quantity": "1348 units",
+        "location": "Nashik, India",
+        "price_per_unit": 47,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 79,
+        "name": "Material 79",
+        "category": "Construction",
+        "quantity": "150 m\u00b2",
+        "location": "Delhi, India",
+        "price_per_unit": 6,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 80,
+        "name": "Material 80",
+        "category": "Plastic",
+        "quantity": "620 m\u00b2",
+        "location": "Pune, India",
+        "price_per_unit": 34,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 81,
+        "name": "Material 81",
+        "category": "Wood",
+        "quantity": "716 units",
+        "location": "Nashik, India",
+        "price_per_unit": 11,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 82,
+        "name": "Material 82",
+        "category": "Plastic",
+        "quantity": "858 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 10,
+        "available": false,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 83,
+        "name": "Material 83",
+        "category": "Metal",
+        "quantity": "1896 units",
+        "location": "Jaipur, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 84,
+        "name": "Material 84",
+        "category": "Plastic",
+        "quantity": "1953 units",
+        "location": "Mumbai, India",
+        "price_per_unit": 13,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 85,
+        "name": "Material 85",
+        "category": "Textile",
+        "quantity": "1333 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 17,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 86,
+        "name": "Material 86",
+        "category": "Metal",
+        "quantity": "1564 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 50,
+        "available": false,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 87,
+        "name": "Material 87",
+        "category": "Textile",
+        "quantity": "1931 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 20,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 88,
+        "name": "Material 88",
+        "category": "Glass",
+        "quantity": "951 kg",
+        "location": "Chennai, India",
+        "price_per_unit": 41,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 89,
+        "name": "Material 89",
+        "category": "Plastic",
+        "quantity": "1046 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 9,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 90,
+        "name": "Material 90",
+        "category": "Plastic",
+        "quantity": "433 kg",
+        "location": "Pune, India",
+        "price_per_unit": 47,
+        "available": false,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 91,
+        "name": "Material 91",
+        "category": "Plastic",
+        "quantity": "802 kg",
+        "location": "Jaipur, India",
+        "price_per_unit": 38,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 92,
+        "name": "Material 92",
+        "category": "Glass",
+        "quantity": "458 m\u00b2",
+        "location": "Kolkata, India",
+        "price_per_unit": 41,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 93,
+        "name": "Material 93",
+        "category": "Textile",
+        "quantity": "1234 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 41,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 94,
+        "name": "Material 94",
+        "category": "Metal",
+        "quantity": "1485 m\u00b2",
+        "location": "Mumbai, India",
+        "price_per_unit": 34,
+        "available": true,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 95,
+        "name": "Material 95",
+        "category": "Wood",
+        "quantity": "627 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 49,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 96,
+        "name": "Material 96",
+        "category": "Construction",
+        "quantity": "832 units",
+        "location": "Nashik, India",
+        "price_per_unit": 39,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 97,
+        "name": "Material 97",
+        "category": "Metal",
+        "quantity": "1066 units",
+        "location": "Chennai, India",
+        "price_per_unit": 37,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 98,
+        "name": "Material 98",
+        "category": "Textile",
+        "quantity": "1241 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 11,
+        "available": false,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 99,
+        "name": "Material 99",
+        "category": "Construction",
+        "quantity": "198 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 37,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 100,
+        "name": "Material 100",
+        "category": "Plastic",
+        "quantity": "1318 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 5,
+        "available": false,
+        "seller": "Waste2Wealth"
+    }
+]

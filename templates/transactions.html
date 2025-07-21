@@ -1,0 +1,40 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}Transactions{% endblock %}
+
+{% block content %}
+<h1>Transactions</h1>
+
+{% if transactions %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Material</th>
+            <th>Partner</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.material.name if transaction.material else 'Unknown' }}</td>
+            <td>
+                {% if transaction.buyer_id == current_user.id %}
+                    {{ transaction.seller.company_name if transaction.seller else 'Unknown Seller' }}
+                {% else %}
+                    {{ transaction.buyer.company_name if transaction.buyer else 'Unknown Buyer' }}
+                {% endif %}
+            </td>
+            <td>{{ transaction.transaction_date.strftime('%Y-%m-%d') }}</td>
+            <td>{{ transaction.status }}</td>
+            <td>${{ "%.2f"|format(transaction.total_price) if transaction.total_price else '0.00' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No transactions found.</p>
+{% endif %}
+{% endblock %}

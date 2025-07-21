@@ -73,4 +73,23 @@
             </ul>
         </div>
     </div>
+
+    <!-- User Section -->
+    <div class="menu-section">
+        <h6 class="menu-section-title"> USER</h6>
+        <ul class="menu-list">
+            <li class="menu-item {% if request.endpoint == 'settings' %}active{% endif %}">
+                <a href="{{ url_for('settings') }}" class="menu-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="menu-item {% if request.endpoint == 'profile' %}active{% endif %}">
+                <a href="{{ url_for('profile') }}" class="menu-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </aside>

@@ -1,0 +1,1002 @@
+[
+    {
+        "id": 1,
+        "name": "ReTex Fiber Blend",
+        "category": "Textile",
+        "quantity": "1996 kg",
+        "location": "Mumbai, India",
+        "price_per_unit": 10,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 2,
+        "name": "Recycled Steel Batch",
+        "category": "Metal",
+        "quantity": "1770 kg",
+        "location": "Jaipur, India",
+        "price_per_unit": 21,
+        "available": true,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 3,
+        "name": "ReBrick Units",
+        "category": "Construction",
+        "quantity": "1231 units",
+        "location": "Delhi, India",
+        "price_per_unit": 42,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 4,
+        "name": "E-Waste Components Pack",
+        "category": "Electronic",
+        "quantity": "874 kg",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 5,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 5,
+        "name": "ReTimber Slabs",
+        "category": "Wood",
+        "quantity": "526 units",
+        "location": "Hyderabad, India",
+        "price_per_unit": 29,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 6,
+        "name": "Upcycled Iron Bars",
+        "category": "Metal",
+        "quantity": "1547 kg",
+        "location": "Pune, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 7,
+        "name": "Salvaged Wood Planks",
+        "category": "Wood",
+        "quantity": "799 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 9,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 8,
+        "name": "Shattered Glass Panels",
+        "category": "Glass",
+        "quantity": "1865 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 50,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 9,
+        "name": "PET Flake Pack",
+        "category": "Plastic",
+        "quantity": "1611 kg",
+        "location": "Mumbai, India",
+        "price_per_unit": 6,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 10,
+        "name": "Plastic Shred Mix",
+        "category": "Plastic",
+        "quantity": "532 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 33,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 11,
+        "name": "Circuit Board Sheets",
+        "category": "Electronic",
+        "quantity": "1103 m\u00b2",
+        "location": "Nashik, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 12,
+        "name": "Thermoplastic Tiles",
+        "category": "Plastic",
+        "quantity": "1599 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 43,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 13,
+        "name": "Treated Wood Scraps",
+        "category": "Wood",
+        "quantity": "690 kg",
+        "location": "Jaipur, India",
+        "price_per_unit": 24,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 14,
+        "name": "Wooden Flooring Offcuts",
+        "category": "Wood",
+        "quantity": "1351 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 29,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 15,
+        "name": "Electronics Scrap Load",
+        "category": "Electronic",
+        "quantity": "127 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 10,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 16,
+        "name": "Digital Panel Mix",
+        "category": "Electronic",
+        "quantity": "397 m\u00b2",
+        "location": "Kolkata, India",
+        "price_per_unit": 18,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 17,
+        "name": "Post-Use Glass Mix",
+        "category": "Glass",
+        "quantity": "1825 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 12,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 18,
+        "name": "ReGlass Sheet Bundle",
+        "category": "Glass",
+        "quantity": "165 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 42,
+        "available": true,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 19,
+        "name": "Timber Panel Mix",
+        "category": "Wood",
+        "quantity": "1997 kg",
+        "location": "Hyderabad, India",
+        "price_per_unit": 33,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 20,
+        "name": "Furniture Grade Offcuts",
+        "category": "Wood",
+        "quantity": "1756 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 21,
+        "name": "Packaging Film Waste",
+        "category": "Plastic",
+        "quantity": "810 m\u00b2",
+        "location": "Bangalore, India",
+        "price_per_unit": 25,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 22,
+        "name": "Architectural Glass Waste",
+        "category": "Glass",
+        "quantity": "1830 m\u00b2",
+        "location": "Jaipur, India",
+        "price_per_unit": 22,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 23,
+        "name": "Reclaimed Glass Loads",
+        "category": "Glass",
+        "quantity": "1752 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 24,
+        "name": "EcoDevice Shells",
+        "category": "Electronic",
+        "quantity": "528 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 33,
+        "available": true,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 25,
+        "name": "EcoWoven Yarn",
+        "category": "Textile",
+        "quantity": "989 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 33,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 26,
+        "name": "Crushed Glass Particles",
+        "category": "Glass",
+        "quantity": "381 kg",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 41,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 27,
+        "name": "Laminate Reuse Boards",
+        "category": "Wood",
+        "quantity": "1434 units",
+        "location": "Hyderabad, India",
+        "price_per_unit": 26,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 28,
+        "name": "Clear Glass Sheets",
+        "category": "Glass",
+        "quantity": "908 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 29,
+        "name": "Plastic Scrap Units",
+        "category": "Plastic",
+        "quantity": "1781 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 50,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 30,
+        "name": "Post-Use Plastic Granules",
+        "category": "Plastic",
+        "quantity": "103 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 38,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 31,
+        "name": "Scrap Alloy Components",
+        "category": "Metal",
+        "quantity": "1155 units",
+        "location": "Delhi, India",
+        "price_per_unit": 38,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 32,
+        "name": "Tempered Glass Panels",
+        "category": "Glass",
+        "quantity": "258 m\u00b2",
+        "location": "Pune, India",
+        "price_per_unit": 21,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 33,
+        "name": "EcoGlass Mix",
+        "category": "Glass",
+        "quantity": "724 m\u00b2",
+        "location": "Nashik, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 34,
+        "name": "PCB Bulk Pack",
+        "category": "Electronic",
+        "quantity": "1439 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 35,
+        "name": "Colored Glass Chunks",
+        "category": "Glass",
+        "quantity": "1694 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 45,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 36,
+        "name": "ReWeave Fabric Sheets",
+        "category": "Textile",
+        "quantity": "462 m\u00b2",
+        "location": "Bangalore, India",
+        "price_per_unit": 16,
+        "available": true,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 37,
+        "name": "Upcycled Cloth Bales",
+        "category": "Textile",
+        "quantity": "1465 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 19,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 38,
+        "name": "Post-Consumer Fabric Rolls",
+        "category": "Textile",
+        "quantity": "831 units",
+        "location": "Mumbai, India",
+        "price_per_unit": 5,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 39,
+        "name": "Molded Plastic Sheets",
+        "category": "Plastic",
+        "quantity": "525 m\u00b2",
+        "location": "Mumbai, India",
+        "price_per_unit": 46,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 40,
+        "name": "Sustainable Linen Panels",
+        "category": "Textile",
+        "quantity": "1367 m\u00b2",
+        "location": "Chennai, India",
+        "price_per_unit": 25,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 41,
+        "name": "Reinforced Metal Parts",
+        "category": "Metal",
+        "quantity": "814 units",
+        "location": "Hyderabad, India",
+        "price_per_unit": 39,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 42,
+        "name": "High-Density Plastic Waste",
+        "category": "Plastic",
+        "quantity": "1710 units",
+        "location": "Chennai, India",
+        "price_per_unit": 40,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 43,
+        "name": "Industrial Metal Scraps",
+        "category": "Metal",
+        "quantity": "1424 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 47,
+        "available": false,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 44,
+        "name": "Smart Waste Tiles",
+        "category": "Electronic",
+        "quantity": "1163 m\u00b2",
+        "location": "Delhi, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 45,
+        "name": "E-Plastic Casing Units",
+        "category": "Electronic",
+        "quantity": "1296 units",
+        "location": "Delhi, India",
+        "price_per_unit": 27,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 46,
+        "name": "Sheet Metal Units",
+        "category": "Metal",
+        "quantity": "454 units",
+        "location": "Chennai, India",
+        "price_per_unit": 12,
+        "available": true,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 47,
+        "name": "Wood Trim Scraps",
+        "category": "Wood",
+        "quantity": "141 kg",
+        "location": "Hyderabad, India",
+        "price_per_unit": 34,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 48,
+        "name": "Concrete Debris Pack",
+        "category": "Construction",
+        "quantity": "211 units",
+        "location": "Mumbai, India",
+        "price_per_unit": 16,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 49,
+        "name": "Organic Cotton Offcuts",
+        "category": "Textile",
+        "quantity": "670 kg",
+        "location": "Chennai, India",
+        "price_per_unit": 19,
+        "available": false,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 50,
+        "name": "Stainless Steel Shards",
+        "category": "Metal",
+        "quantity": "789 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 21,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 51,
+        "name": "Mixed Polymer Load",
+        "category": "Plastic",
+        "quantity": "1052 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 52,
+        "name": "Sawn Wood Panels",
+        "category": "Wood",
+        "quantity": "289 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 53,
+        "name": "Salvaged Building Tiles",
+        "category": "Construction",
+        "quantity": "628 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 27,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 54,
+        "name": "Denim Recycling Sheets",
+        "category": "Textile",
+        "quantity": "201 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 36,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 55,
+        "name": "Microchip Sheets",
+        "category": "Electronic",
+        "quantity": "1691 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 26,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 56,
+        "name": "Reclaimed Metal Panels",
+        "category": "Metal",
+        "quantity": "1027 m\u00b2",
+        "location": "Jaipur, India",
+        "price_per_unit": 37,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 57,
+        "name": "Flat Glass Tiles",
+        "category": "Glass",
+        "quantity": "1306 m\u00b2",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 14,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 58,
+        "name": "Polyethylene Film Sheets",
+        "category": "Plastic",
+        "quantity": "1004 m\u00b2",
+        "location": "Bangalore, India",
+        "price_per_unit": 22,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 59,
+        "name": "Plastic Crate Fragments",
+        "category": "Plastic",
+        "quantity": "348 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 15,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 60,
+        "name": "Cotton Waste Packs",
+        "category": "Textile",
+        "quantity": "1353 units",
+        "location": "Jaipur, India",
+        "price_per_unit": 11,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 61,
+        "name": "Iron Reuse Pack",
+        "category": "Metal",
+        "quantity": "789 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 13,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 62,
+        "name": "Alloy Offcut Pieces",
+        "category": "Metal",
+        "quantity": "1589 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 22,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 63,
+        "name": "ReFashion Textile Loads",
+        "category": "Textile",
+        "quantity": "1510 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 22,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 64,
+        "name": "Reinforced Wall Panels",
+        "category": "Construction",
+        "quantity": "1901 m\u00b2",
+        "location": "Chennai, India",
+        "price_per_unit": 14,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 65,
+        "name": "EcoPine Blocks",
+        "category": "Wood",
+        "quantity": "336 kg",
+        "location": "Kolkata, India",
+        "price_per_unit": 29,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 66,
+        "name": "Frosted Glass Shards",
+        "category": "Glass",
+        "quantity": "1033 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 18,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 67,
+        "name": "Natural Fiber Packs",
+        "category": "Textile",
+        "quantity": "342 kg",
+        "location": "Chennai, India",
+        "price_per_unit": 45,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 68,
+        "name": "EcoMetal Blocks",
+        "category": "Metal",
+        "quantity": "1847 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 18,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 69,
+        "name": "Carpentry Waste Pack",
+        "category": "Wood",
+        "quantity": "1695 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 18,
+        "available": true,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 70,
+        "name": "Bottled Glass Waste",
+        "category": "Glass",
+        "quantity": "1682 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 28,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 71,
+        "name": "Injection Mold Waste",
+        "category": "Plastic",
+        "quantity": "1071 kg",
+        "location": "Bangalore, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 72,
+        "name": "CircularTextile Units",
+        "category": "Textile",
+        "quantity": "984 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 45,
+        "available": true,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 73,
+        "name": "CircularWood Units",
+        "category": "Wood",
+        "quantity": "290 units",
+        "location": "Pune, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 74,
+        "name": "Decorative Glass Panels",
+        "category": "Glass",
+        "quantity": "1502 units",
+        "location": "Chennai, India",
+        "price_per_unit": 48,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 75,
+        "name": "EcoFiber Rolls",
+        "category": "Textile",
+        "quantity": "1684 m\u00b2",
+        "location": "Nashik, India",
+        "price_per_unit": 8,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 76,
+        "name": "ReTech Modules",
+        "category": "Electronic",
+        "quantity": "1911 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 13,
+        "available": false,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 77,
+        "name": "Small Electronics Waste",
+        "category": "Electronic",
+        "quantity": "114 m\u00b2",
+        "location": "Delhi, India",
+        "price_per_unit": 49,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 78,
+        "name": "Structural Steel Load",
+        "category": "Metal",
+        "quantity": "1348 units",
+        "location": "Nashik, India",
+        "price_per_unit": 47,
+        "available": true,
+        "seller": "UrbanEcycle"
+    },
+    {
+        "id": 79,
+        "name": "Construction Fill Waste",
+        "category": "Construction",
+        "quantity": "150 m\u00b2",
+        "location": "Delhi, India",
+        "price_per_unit": 6,
+        "available": false,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 80,
+        "name": "HDPE Plastic Boards",
+        "category": "Plastic",
+        "quantity": "620 m\u00b2",
+        "location": "Pune, India",
+        "price_per_unit": 34,
+        "available": false,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 81,
+        "name": "Broken Wood Frames",
+        "category": "Wood",
+        "quantity": "716 units",
+        "location": "Nashik, India",
+        "price_per_unit": 11,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 82,
+        "name": "Plastic Parts Scrap",
+        "category": "Plastic",
+        "quantity": "858 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 10,
+        "available": false,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 83,
+        "name": "Industrial Metal Components",
+        "category": "Metal",
+        "quantity": "1896 units",
+        "location": "Jaipur, India",
+        "price_per_unit": 25,
+        "available": true,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 84,
+        "name": "Used Plastic Pallets",
+        "category": "Plastic",
+        "quantity": "1953 units",
+        "location": "Mumbai, India",
+        "price_per_unit": 13,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 85,
+        "name": "Textile Scrap Mix",
+        "category": "Textile",
+        "quantity": "1333 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 17,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 86,
+        "name": "Metal Waste Sheets",
+        "category": "Metal",
+        "quantity": "1564 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 50,
+        "available": false,
+        "seller": "EcoPlast"
+    },
+    {
+        "id": 87,
+        "name": "Garment Waste Bales",
+        "category": "Textile",
+        "quantity": "1931 kg",
+        "location": "Delhi, India",
+        "price_per_unit": 20,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 88,
+        "name": "Insulated Glass Sheets",
+        "category": "Glass",
+        "quantity": "951 kg",
+        "location": "Chennai, India",
+        "price_per_unit": 41,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 89,
+        "name": "Recycled Plastic Roll",
+        "category": "Plastic",
+        "quantity": "1046 m\u00b2",
+        "location": "Hyderabad, India",
+        "price_per_unit": 9,
+        "available": true,
+        "seller": "Sustainable Co."
+    },
+    {
+        "id": 90,
+        "name": "Compact Plastic Bits",
+        "category": "Plastic",
+        "quantity": "433 kg",
+        "location": "Pune, India",
+        "price_per_unit": 47,
+        "available": false,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 91,
+        "name": "Poly Waste Blocks",
+        "category": "Plastic",
+        "quantity": "802 kg",
+        "location": "Jaipur, India",
+        "price_per_unit": 38,
+        "available": false,
+        "seller": "Waste2Wealth"
+    },
+    {
+        "id": 92,
+        "name": "Stained Glass Bits",
+        "category": "Glass",
+        "quantity": "458 m\u00b2",
+        "location": "Kolkata, India",
+        "price_per_unit": 41,
+        "available": false,
+        "seller": "ClearCycle"
+    },
+    {
+        "id": 93,
+        "name": "End-of-Life Fabric Units",
+        "category": "Textile",
+        "quantity": "1234 units",
+        "location": "Ahmedabad, India",
+        "price_per_unit": 41,
+        "available": false,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 94,
+        "name": "High-Grade Metal Panels",
+        "category": "Metal",
+        "quantity": "1485 m\u00b2",
+        "location": "Mumbai, India",
+        "price_per_unit": 34,
+        "available": true,
+        "seller": "ReEarth"
+    },
+    {
+        "id": 95,
+        "name": "Premium Reclaimed Wood",
+        "category": "Wood",
+        "quantity": "627 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 49,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 96,
+        "name": "EcoBlock Structures",
+        "category": "Construction",
+        "quantity": "832 units",
+        "location": "Nashik, India",
+        "price_per_unit": 39,
+        "available": true,
+        "seller": "GreenBuild"
+    },
+    {
+        "id": 97,
+        "name": "Circular Metal Units",
+        "category": "Metal",
+        "quantity": "1066 units",
+        "location": "Chennai, India",
+        "price_per_unit": 37,
+        "available": false,
+        "seller": "GreenMetal"
+    },
+    {
+        "id": 98,
+        "name": "Reclaimed Wool Batches",
+        "category": "Textile",
+        "quantity": "1241 kg",
+        "location": "Nashik, India",
+        "price_per_unit": 11,
+        "available": false,
+        "seller": "ReuseWorks"
+    },
+    {
+        "id": 99,
+        "name": "Upcycled Framework Units",
+        "category": "Construction",
+        "quantity": "198 units",
+        "location": "Kolkata, India",
+        "price_per_unit": 37,
+        "available": true,
+        "seller": "LoopCycle"
+    },
+    {
+        "id": 100,
+        "name": "RePlast Supply Units",
+        "category": "Plastic",
+        "quantity": "1318 units",
+        "location": "Bangalore, India",
+        "price_per_unit": 5,
+        "available": false,
+        "seller": "Waste2Wealth"
+    }
+]

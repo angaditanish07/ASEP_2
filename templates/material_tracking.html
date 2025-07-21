@@ -1,0 +1,38 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}Material Tracking{% endblock %}
+
+{% block content %}
+<h1>Material Tracking</h1>
+
+{% if shipments %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Material</th>
+            <th>Partner</th>
+            <th>Status</th>
+            <th>Transaction Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for shipment in shipments %}
+        <tr>
+            <td>{{ shipment.material.name if shipment.material else 'Unknown' }}</td>
+            <td>
+                {% if shipment.buyer_id == current_user.id %}
+                    {{ shipment.seller.company_name if shipment.seller else 'Unknown Seller' }}
+                {% else %}
+                    {{ shipment.buyer.company_name if shipment.buyer else 'Unknown Buyer' }}
+                {% endif %}
+            </td>
+            <td>{{ shipment.status }}</td>
+            <td>{{ shipment.transaction_date.strftime('%Y-%m-%d') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No shipments currently in transit or shipped.</p>
+{% endif %}
+{% endblock %}

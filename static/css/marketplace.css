@@ -1,0 +1,68 @@
+/* marketplace.css */
+/* ... existing styles ... */
+
+/* Dashboard Cards Uniform Styles */
+.stat-card {
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    padding: 1rem;
+    background: linear-gradient(135deg, #ffffff, #e9f0f7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem; /* Added margin to separate icon from text */
+}
+
+.stat-icon.bg-primary {
+    background-color: #007bff !important;
+}
+
+.stat-icon.bg-success {
+    background-color: #28a745 !important;
+}
+
+.stat-icon.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.stat-icon.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a2a6c;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #495057;
+    margin: 0;
+    margin-left: 0.5rem; /* Added margin for better spacing */
+}
+
+/* Adjust flex container to align icon and text with spacing */
+.stat-card .d-flex.align-items-center {
+    gap: 1rem; /* Add gap between icon and text */
+}

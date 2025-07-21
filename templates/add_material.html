@@ -1,0 +1,43 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Add New Material</h2>
+    <form method="POST" action="{{ url_for('add_material') }}">
+        <div class="mb-3">
+            <label for="name" class="form-label">Material Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" id="category" name="category" required>
+                <option value="" disabled selected>Select category</option>
+                <option value="Construction">Construction</option>
+                <option value="Electronic">Electronic</option>
+                <option value="Glass">Glass</option>
+                <option value="Metal">Metal</option>
+                <option value="Plastic">Plastic</option>
+                <option value="Textile">Textile</option>
+                <option value="Wood">Wood</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" step="any" class="form-control" id="quantity" name="quantity" required>
+        </div>
+        <div class="mb-3">
+            <label for="unit" class="form-label">Unit (e.g., kg, liters)</label>
+            <input type="text" class="form-control" id="unit" name="unit" required>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price per Unit</label>
+            <input type="number" step="any" class="form-control" id="price" name="price" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Material</button>
+    </form>
+</div>
+{% endblock %}

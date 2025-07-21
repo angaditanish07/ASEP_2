@@ -461,3 +461,64 @@
         padding: 1rem;
     }
 }
+/* Impact Page Styles */
+.impact-equivalent {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #0d9488;
+}
+
+.impact-equivalent h5 {
+    color: #0d9488;
+    margin-bottom: 1rem;
+}
+
+/* Report Styles */
+.report-header {
+    background: #f1f5f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.report-metric {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #f8fafc;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.report-metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.report-metric .metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0d9488;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.report-metric .metric-label {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Chart Containers */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 250px;
+    }
+}
